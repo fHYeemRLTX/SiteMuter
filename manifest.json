@@ -1,0 +1,25 @@
+{
+	"name": "Site Muter",
+	"version": "1.1",
+	"manifest_version": 2,
+	"description": "Automatically mute and unmute sites. Sites not on the exclusion list will be muted.",
+	"icons": {
+		"16": "icons/sme16x16.png",
+		"32": "icons/sme32x32.png",
+		"48": "icons/sme48x48.png",
+		"64": "icons/sme64x64.png",
+		"128": "icons/sme128x128.png",
+		"256": "icons/sme256x256.png",
+		"512": "icons/sme512x512.png"
+	},
+	"incognito": "split",
+	"permissions": ["tabs"],
+	"browser_action": {
+		"default_popup": "popup/popup.html"
+	},
+	"options_page": "popup/popup.html",
+	"background": {
+		"persistent": false,
+		"scripts": [ "background.js" ]
+	}
+}

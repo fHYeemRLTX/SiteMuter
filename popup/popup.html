@@ -1,0 +1,56 @@
+<html lang="en">
+<!--
+Copyright (C) 2021 fHYeemRLTX
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+    <head>
+        <meta charset="UTF-8" />
+        <title>Site Muter</title>
+		<style>
+		#icon {
+			float: right;
+		}
+		#excludelist {
+			font-family: Courier New, Courier, monospace;
+		}
+		h1, label, button, #excludelist, #saveresult {
+			margin: 3px;
+		}
+		body {
+			width: 500px;
+			font-family: Calibri, Arial, Helvetica, sans-serif;
+		}
+		</style>
+    </head>
+    <body>
+		<svg width="75" height="75" viewBox="0 0 500 500" id="icon" alt="">
+			<rect x="0" y="0" width="500" height="500" fill="none" stroke-width="0" />
+			<rect x="225" y="175" width="150" height="150" fill="white" stroke="black" stroke-width="10" />
+			<polyline points="225,175 125,50 125,450 225,325" fill="white" stroke="black" stroke-width="10" />
+			<line x1="25" y1="25" x2="475" y2="475" stroke="red" stroke-linecap="round" stroke-width="30" stroke-dasharray="35,40" />
+			<line x1="25" y1="475" x2="475" y2="25" stroke="red" stroke-linecap="round" stroke-width="30" stroke-dasharray="35,40" />
+		</svg>
+		<h1>Site Muter</h1>
+        <label for="excludelist" id="excludelistlabel">Domains to exclude (one per line)</label><br />
+		<textarea id="excludelist" rows="20"></textarea>
+		<br />
+		<button id="save">Save</button> <span id="saveresult"></span>
+		<p></p>
+		<button id="showlicense">License: LGPLv2.1</button>
+		<iframe src="../lgpl-2.1-standalone.html" id="license" style="display: none;" width="999" height="999" title="License"></iframe>
+		<script src="popup.js"></script>
+    </body>
+</html>
